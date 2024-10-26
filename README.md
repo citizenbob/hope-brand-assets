@@ -1,0 +1,1 @@
+# hope-brand-assets
