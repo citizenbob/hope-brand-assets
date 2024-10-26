@@ -1,77 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Animated Gradient Bubbles</title>
-  <style>
-    body, html { margin: 0; padding: 0; overflow: hidden; }
-    .text-container {
-      width: 100vw;
-      height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      font-size: 96px;
-      color: #fff;
-      opacity: 0.8;
-      user-select: none;
-    }
-    .gradient-bg {
-      width: 100vw;
-      height: 100vh;
-      position: relative;
-      overflow: hidden;
-      background: linear-gradient(40deg, rgb(108, 0, 162), rgb(0, 17, 82));
-    }
-    .gradients-container {
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      filter: url(#goo) blur(40px);
-    }
-    .gradient {
-      position: absolute;
-      width: 80%;
-      height: 80%;
-      border-radius: 50%;
-      mix-blend-mode: hard-light;
-      opacity: 0.8;
-      animation: float 20s infinite ease-in-out alternate;
-    }
-    .g1 { background: radial-gradient(circle, rgba(18, 113, 255, 0.8), transparent); animation-duration: 25s; }
-    .g2 { background: radial-gradient(circle, rgba(221, 74, 255, 0.8), transparent); animation-duration: 30s; }
-    .g3 { background: radial-gradient(circle, rgba(100, 220, 255, 0.8), transparent); animation-duration: 35s; }
-    .g4 { background: radial-gradient(circle, rgba(200, 50, 50, 0.8), transparent); animation-duration: 40s; }
-    .g5 { background: radial-gradient(circle, rgba(180, 180, 50, 0.8), transparent); animation-duration: 45s; }
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite + TS</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dongle:wght@700&display=swap" rel="stylesheet">
 
-    /* Animation */
-    @keyframes float {
-      0% { transform: translateY(0) translateX(0); }
-      50% { transform: translateY(-20px) translateX(10px); }
-      100% { transform: translateY(0) translateX(-10px); }
-    }
-  </style>
-</head>
-<body>
-  <div class="text-container">Bubbles</div>
+    <script type="module" crossorigin src="/assets/index-77dcf5fd.js"></script>
+    <link rel="stylesheet" href="/assets/index-7d643f52.css">
+  </head>
+  <body>
+  <div class="text-container">
+    Bubbles
+  </div>
   <div class="gradient-bg">
-    <svg width="0" height="0">
+    <svg xmlns="http://www.w3.org/2000/svg">
       <defs>
         <filter id="goo">
-          <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur"/>
-          <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 18 -8" result="goo"/>
-          <feBlend in="SourceGraphic" in2="goo"/>
+          <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
+          <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -8" result="goo" />
+          <feBlend in="SourceGraphic" in2="goo" />
         </filter>
       </defs>
     </svg>
     <div class="gradients-container">
-      <div class="gradient g1"></div>
-      <div class="gradient g2"></div>
-      <div class="gradient g3"></div>
-      <div class="gradient g4"></div>
-      <div class="gradient g5"></div>
+      <div class="g1"></div>
+      <div class="g2"></div>
+      <div class="g3"></div>
+      <div class="g4"></div>
+      <div class="g5"></div>
+      <div class="interactive"></div>
     </div>
   </div>
-</body>
+    
+  </body>
 </html>
