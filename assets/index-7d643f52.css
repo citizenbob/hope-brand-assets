@@ -25,12 +25,12 @@ html, body {
   :root {
     --color-bg1: rgb(106, 27, 154); /* Hopeful Purple */
     --color-bg2: rgb(125, 113, 170); /* Silver Wisdom */
-    --color1: rgb(255, 230, 202); /* Warm Peach */
-    --color2: rgb(255, 183, 163); /* Vibrant Coral */
-    --color3: rgb(198, 194, 255); /* Soothing Lavender */
-    --color4: rgb(106, 27, 154); /* Hopeful Purple */
-    --color5: rgb(125, 113, 170); /* Silver Wisdom */
-    --color-interactive: rgb(140, 100, 255);
+    --color1: 255, 230, 202; /* Warm Peach */
+    --color2: 255, 183, 163; /* Vibrant Coral */
+    --color3: 198, 194, 255; /* Soothing Lavender */
+    --color4: 106, 27, 154; /* Hopeful Purple */
+    --color5: 125, 113, 170; /* Silver Wisdom */
+    --color-interactive: 140, 100, 255;
     --circle-size: 80%;
     --blending: hard-light;
   }
